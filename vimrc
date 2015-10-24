@@ -1,7 +1,4 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" vimrc.
 
 " Make Vim more useful
 set nocompatible
@@ -25,11 +22,9 @@ let mapleader=","
 set binary
 set noeol
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+set undodir=~/.vim/undo//
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
@@ -54,7 +49,7 @@ set tabstop=2
 set list
 " show hidden characters in Vim
 :set list
- 
+
 " settings for hidden chars
 " what particular chars they are displayed with
 :set lcs=tab:▒░,trail:▓
@@ -62,7 +57,7 @@ set list
 :set listchars=tab:▒░,trail:▓
 " used \u2592\u2591 for tab and \u2593 for trailing spaces in line.
 " In Vim help they suggest using ">-" for tab and "-" for trail.
- 
+
 " hide hidden chars
 :set nolist
 " Highlight searches
@@ -192,22 +187,7 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 set lazyredraw
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-if filereadable(glob("~/.vimrc.bundles")) 
+
+if filereadable(glob("~/.vimrc.bundles"))
 				source ~/.vimrc.bundles
 endif
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line

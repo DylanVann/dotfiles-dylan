@@ -2,38 +2,48 @@
 " vim: set sw=2 ts=2 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 " }
 
-Bundle 'vim-scripts/loremipsum'
-Plugin 'christoomey/vim-run-interactive'
-Plugin 'croaky/vim-colors-github'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'pbrisbin/vim-mkdir'
-Plugin 'scrooloose/syntastic'
-Plugin 'slim-template/vim-slim'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/tComment'
-Plugin 'godlygeek/tabular'
-Plugin 'pangloss/vim-javascript'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'rstacruz/sparkup'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'zeekay/vim-html2jade'
+" Install vim-plug if it is not installed.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-Plugin 'digitaltoad/vim-jade'
+call plug#begin('~/.vim/bundle')
+Plug 'vim-scripts/loremipsum'
+Plug 'christoomey/vim-run-interactive'
+Plug 'croaky/vim-colors-github'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/ctags.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/tComment'
+Plug 'godlygeek/tabular'
+Plug 'pangloss/vim-javascript'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'rstacruz/sparkup'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'zeekay/vim-html2jade'
+Plug 'Shougo/neocomplete.vim'
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'digitaltoad/vim-jade'
 " vim-jade {
 augroup vim_jade
   autocmd!
@@ -41,7 +51,7 @@ augroup vim_jade
 augroup END
 " }
 
-Plugin 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat'
 " vim-autoformat {
 augroup vim_autoformat
   autocmd!
@@ -49,7 +59,7 @@ augroup vim_autoformat
 augroup END
 " }
 
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " nerdtree {
 augroup NERDTree
   autocmd!
@@ -57,7 +67,7 @@ augroup NERDTree
 augroup END
 " }
 
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " ctrlp {
 augroup ctrlp
   autocmd!
@@ -65,7 +75,7 @@ augroup ctrlp
 augroup END
 " }
 
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 " vim-airline {
 augroup vim-airline
   autocmd!
@@ -73,7 +83,21 @@ augroup vim-airline
 augroup END
 " }
 
-Plugin 'Shougo/neocomplete.vim'
+
+
+call plug#end()
+
+" vim-colors-solarized {
+augroup vim_colors_solarized
+  autocmd!
+  syntax enable
+  set background=dark
+  colorscheme solarized
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+augroup END
+" }
+
 " neocomplete {
 augroup neocomplete_config
   autocmd!
@@ -101,7 +125,7 @@ augroup neocomplete_config
   endif
   let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-  " Plugin key-mappings.
+  " Plug key-mappings.
   inoremap <expr><C-g>     neocomplete#undo_completion()
   inoremap <expr><C-l>     neocomplete#complete_common_string()
 
