@@ -56,6 +56,9 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# aws
+source ~/.aws_credentials
+
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
