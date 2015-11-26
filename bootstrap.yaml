@@ -35,6 +35,7 @@
 - !!python/unicode 'heroku-toolbelt'
 - !!python/unicode 'hub'
 - !!python/unicode 'imagemagick'
+- !!python/unicode 'jenv'
 - !!python/unicode 'jpeg'
 - !!python/unicode 'libevent'
 - !!python/unicode 'libpng'

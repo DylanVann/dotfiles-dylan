@@ -56,6 +56,10 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # aws
 source ~/.aws_credentials
 
