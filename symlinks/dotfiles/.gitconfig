@@ -11,6 +11,7 @@
 	ci = commit
 	st = status
 	undo = "!f() { git clean -df && git checkout -- . }; f"
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
 [core]
 	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
