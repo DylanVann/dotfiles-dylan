@@ -45,6 +45,7 @@ Plug 'honza/vim-snippets'
 Plug 'zeekay/vim-html2jade'
 Plug 'Shougo/neocomplete.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'bkad/CamelCaseMotion'
 
 Plug 'digitaltoad/vim-jade'
 " vim-jade {
