@@ -43,19 +43,21 @@ plugins=(git git-flow-completion git-flow)
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# rbenv
+# Ruby - rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# jenv
+# Java - jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 eval "$(jenv init -)"
 
+# Node - nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # aws
 source ~/.aws_credentials
-# nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
