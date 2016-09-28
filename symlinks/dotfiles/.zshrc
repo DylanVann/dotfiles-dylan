@@ -49,6 +49,7 @@ eval "$(rbenv init -)"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 eval "$(jenv init -)"
 
 # aws
