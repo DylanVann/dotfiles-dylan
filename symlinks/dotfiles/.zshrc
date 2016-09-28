@@ -71,6 +71,9 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+# Set default user to shorten prompt.
+export DEFAULT_USER="$USER"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
