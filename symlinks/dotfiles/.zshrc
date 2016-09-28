@@ -54,6 +54,8 @@ eval "$(jenv init -)"
 
 # aws
 source ~/.aws_credentials
+# nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
