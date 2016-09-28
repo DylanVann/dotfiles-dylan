@@ -81,6 +81,8 @@ Plug 'kien/ctrlp.vim'
 augroup ctrlp
   autocmd!
   let g:ctrlp_map = '<c-p>'
+  let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 augroup END
 " }
 
