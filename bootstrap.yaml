@@ -17,7 +17,6 @@
 - !!python/unicode 'virtualbox'
 !!python/unicode 'formulas':
 - !!python/unicode 'autoconf'
-- !!python/unicode 'brew-cask'
 - !!python/unicode 'coreutils'
 - !!python/unicode 'cscope'
 - !!python/unicode 'ctags'
