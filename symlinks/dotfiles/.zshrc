@@ -52,9 +52,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 eval "$(jenv init -)"
 
-# Node - nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# yarn
+export PATH="$(yarn global bin):$PATH"
 
 # aws
 source ~/.aws_credentials
