@@ -1,24 +1,25 @@
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [user]
-	name = Your Name
-	email = you@example.com
+  name = Your Name
+  email = you@example.com
 [alias]
-	s = status
-	c = commit
-	co = checkout
-	br = branch
-	undo = "! f() { git clean -df && git checkout -- . }; f"
-	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
-	reset-to-remote = "! git clean -d -f && git fetch origin && git checkout master && git reset --hard origin/master"
+  s = status
+  c = commit
+  p = push
+  pf = push -f
+  co = checkout
+  br = branch
+  undo = "! f() { git clean -df && git checkout -- . }; f"
+  permission-reset = "! git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply"
+  reset-to-remote = "! git clean -d -f && git fetch origin && git checkout master && git reset --hard origin/master"
 [core]
-	excludesfile = ~/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  excludesfile = ~/.gitignore_global
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+[rebase]
+  autostash = true
+[commit]
+  template = ~/.stCommitMsg
