@@ -50,6 +50,7 @@
 - !!python/unicode 'sqlite'
 - !!python/unicode 'tmux'
 - !!python/unicode 'vim'
+- !!python/unicode 'watchman'
 - !!python/unicode 'x264'
 - !!python/unicode 'xvid'
 - !!python/unicode 'xz'
