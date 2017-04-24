@@ -51,6 +51,14 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.jenv/bin:$PATH"
 export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 eval "$(jenv init -)"
+export PATH=${JAVA_HOME}/bin:$PATH
+
+# Android
+export ANDROID_HOME="/usr/local/opt/android-sdk"
+export ANDROID_SDK_ROOT="/usr/local/opt/android-sdk"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/Cellar/android-sdk/24.4.1_1/tools/bin:$PATH"
+export PATH="/usr/local/Cellar/android-sdk/24.4.1_1/emulator:$PATH"
 
 # yarn
 export PATH="$(yarn global bin):$PATH"
@@ -72,9 +80,6 @@ export EDITOR='vim'
 
 # Set default user to shorten prompt.
 export DEFAULT_USER="$USER"
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # tmuxinator completion
 source ~/.bin/tmuxinator.zsh
