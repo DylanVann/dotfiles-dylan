@@ -10,7 +10,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/bundle')
-Plug 'editorconfig/editorconfig-vim'
+
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-scripts/loremipsum'
@@ -19,6 +19,26 @@ Plug 'croaky/vim-colors-github'
 Plug 'kchmck/vim-coffee-script'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'mxw/vim-jsx'
+Plug 'alvan/vim-closetag'
+
+let g:closetag_filenames = "*.html,*.js"
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['python', 'javascript'],
+                            \ 'passive_filetypes': [] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+
 Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
