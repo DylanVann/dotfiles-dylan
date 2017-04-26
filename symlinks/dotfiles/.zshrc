@@ -54,11 +54,13 @@ eval "$(jenv init -)"
 export PATH=${JAVA_HOME}/bin:$PATH
 
 # Android
-export ANDROID_HOME="/usr/local/opt/android-sdk"
-export ANDROID_SDK_ROOT="/usr/local/opt/android-sdk"
+export ANDROID_HOME="/usr/local/share/android-sdk"
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export PATH="/usr/local/Caskroom/android-sdk/25.2.3/tools:$PATH"
+export PATH="/usr/local/Caskroom/android-sdk/25.2.3/emulator/:$PATH"
+
+# gnubin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/Cellar/android-sdk/24.4.1_1/tools/bin:$PATH"
-export PATH="/usr/local/Cellar/android-sdk/24.4.1_1/emulator:$PATH"
 
 # yarn
 export PATH="$(yarn global bin):$PATH"
