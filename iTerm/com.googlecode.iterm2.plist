@@ -558,15 +558,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>532 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>430 342 796 473 0 0 1920 1178 </string>
+	<string>2267 1024 796 473 1920 0 3840 2138 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 594 592 584 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>960 0 960 1178 0 0 1920 1178 </string>
+	<string>1920 0 1920 2138 1920 0 3840 2138 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>960 688 690 490 0 0 1920 1178 </string>
+	<string>4379 1648 710 490 1920 0 3840 2138 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1920 1069 1920 1069 1920 0 3840 2138 </string>
+	<string>1920 0 1920 2138 1920 0 3840 2138 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>2474 306 570 427 1920 0 3840 2138 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1340,6 +1340,8 @@
 			<real>0.031016021573604058</real>
 			<key>Triggers</key>
 			<array/>
+			<key>Unicode Version</key>
+			<integer>8</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1444,7 +1446,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-09T07:47:39Z</date>
+	<date>2017-05-11T14:03:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1476,7 +1478,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1494396288</real>
+	<real>1494511360</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
