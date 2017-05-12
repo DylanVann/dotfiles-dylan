@@ -1,7 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="bureau"
+
+ZSH_THEME="wezm"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -56,3 +59,5 @@ source ~/.bin/tmuxinator.zsh
 
 # fastlane
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
+
+cd ~/repos

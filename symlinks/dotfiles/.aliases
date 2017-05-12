@@ -7,19 +7,16 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias r="cd ~/repos"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias r="cd /Volumes/repos/"
-alias g="git"
 alias stree="open -n /Applications/SourceTree.app"
+alias g="git"
 alias h="history"
 alias j="jobs"
 alias v="vim"
 alias t="tmux"
 alias serve="python -m SimpleHTTPServer 8000"
-alias prezip="find . -type f -exec gzip '{}' \; -exec mv '{}.gz' '{}' \;"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
