@@ -562,7 +562,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 594 592 584 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 0 1920 2138 1920 0 3840 2138 </string>
+	<string>0 0 1920 1178 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>4379 1648 710 490 1920 0 3840 2138 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1446,7 +1446,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-11T14:03:03Z</date>
+	<date>2017-05-29T16:43:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1499,9 +1499,11 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.20170509-nightly</string>
+	<string>3.1.20170525-nightly</string>
 </dict>
 </plist>
