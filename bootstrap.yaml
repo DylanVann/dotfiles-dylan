@@ -1,92 +1,86 @@
-!!python/unicode 'casks':
-- !!python/unicode 'adobe-creative-cloud'
-- !!python/unicode 'atom'
-- !!python/unicode 'cyberduck'
-- !!python/unicode 'filezilla'
-- !!python/unicode 'google-chrome'
-- !!python/unicode 'intellij-idea'
-- !!python/unicode 'webstorm'
-- !!python/unicode 'iterm2'
-- !!python/unicode 'lastpass'
-- !!python/unicode 'mamp'
-- !!python/unicode 'mplayerx'
-- !!python/unicode 'shiftit'
-- !!python/unicode 'skyfonts'
-- !!python/unicode 'sourcetree'
-- !!python/unicode 'transmission'
-- !!python/unicode 'virtualbox'
-!!python/unicode 'formulas':
-- !!python/unicode 'ant'
-- !!python/unicode 'augeas'
-- !!python/unicode 'autoconf'
-- !!python/unicode 'carthage'
-- !!python/unicode 'certbot'
-- !!python/unicode 'coreutils'
-- !!python/unicode 'cscope'
-- !!python/unicode 'ctags'
-- !!python/unicode 'dialog'
-- !!python/unicode 'docker'
-- !!python/unicode 'ffmpeg'
-- !!python/unicode 'findutils'
-- !!python/unicode 'fontconfig'
-- !!python/unicode 'freetype'
-- !!python/unicode 'gd'
-- !!python/unicode 'gdbm'
-- !!python/unicode 'gettext'
-- !!python/unicode 'git'
-- !!python/unicode 'gitstats'
-- !!python/unicode 'gmp'
-- !!python/unicode 'gnuplot'
-- !!python/unicode 'gnutls'
-- !!python/unicode 'icu4c'
-- !!python/unicode 'imagemagick'
-- !!python/unicode 'jenv'
-- !!python/unicode 'jpeg'
-- !!python/unicode 'lame'
-- !!python/unicode 'libevent'
-- !!python/unicode 'libpng'
-- !!python/unicode 'libtasn1'
-- !!python/unicode 'libtiff'
-- !!python/unicode 'libtool'
-- !!python/unicode 'libvo-aacenc'
-- !!python/unicode 'libxml2'
-- !!python/unicode 'libyaml'
-- !!python/unicode 'lua'
-- !!python/unicode 'mongodb'
-- !!python/unicode 'nettle'
-- !!python/unicode 'node'
-- !!python/unicode 'nvm'
-- !!python/unicode 'openconnect'
-- !!python/unicode 'openssl'
-- !!python/unicode 'openssl@1.1'
-- !!python/unicode 'pcre'
-- !!python/unicode 'pkg-config'
-- !!python/unicode 'pyenv'
-- !!python/unicode 'rbenv'
-- !!python/unicode 'rcm'
-- !!python/unicode 'readline'
-- !!python/unicode 'reattach-to-user-namespace'
-- !!python/unicode 'redis'
-- !!python/unicode 'sqlite'
-- !!python/unicode 'tmux'
-- !!python/unicode 'vim'
-- !!python/unicode 'watchman'
-- !!python/unicode 'webp'
-- !!python/unicode 'x264'
-- !!python/unicode 'xvid'
-- !!python/unicode 'xz'
-- !!python/unicode 'zlib'
-- !!python/unicode 'zsh'
-- !!python/unicode 'zsh-completions'
-!!python/unicode 'symlinks':
-    !!python/unicode 'dotfiles/.*': '~'
-    !!python/unicode '/Volumes/repos': '~/repos'
-!!python/unicode 'taps':
-- !!python/unicode 'caskroom/cask'
-- !!python/unicode 'caskroom/versions'
-- !!python/unicode 'facebook/fb'
-- !!python/unicode 'homebrew/boneyard'
-- !!python/unicode 'homebrew/bundle'
-- !!python/unicode 'homebrew/core'
-- !!python/unicode 'homebrew/services'
-- !!python/unicode 'thoughtbot/formulae'
+casks:
+- adobe-creative-cloud
+- atom
+- cyberduck
+- google-chrome
+- webstorm
+- iterm2
+- lastpass
+- skyfonts
+- sourcetree
+- transmission
+formulas:
+- ant
+- augeas
+- autoconf
+- carthage
+- certbot
+- coreutils
+- cscope
+- ctags
+- dialog
+- docker
+- ffmpeg
+- findutils
+- fontconfig
+- freetype
+- gd
+- gdbm
+- gettext
+- git
+- gitstats
+- gmp
+- gnuplot
+- gnutls
+- icu4c
+- imagemagick
+- jenv
+- jpeg
+- lame
+- libevent
+- libpng
+- libtasn1
+- libtiff
+- libtool
+- libvo-aacenc
+- libxml2
+- libyaml
+- lua
+- mongodb
+- nettle
+- nvm
+- openconnect
+- openssl
+- openssl@1.1
+- pcre
+- pkg-config
+- pyenv
+- python3
+- rbenv
+- rcm
+- readline
+- reattach-to-user-namespace
+- redis
+- sqlite
+- tmux
+- vim
+- watchman
+- webp
+- x264
+- xvid
+- xz
+- zlib
+- zsh
+- zsh-completions
+symlinks:
+    /Volumes/repos: ~/repos
+    dotfiles/.*: '~'
+taps:
+- caskroom/cask
+- caskroom/versions
+- facebook/fb
+- homebrew/boneyard
+- homebrew/bundle
+- homebrew/core
+- homebrew/services
+- thoughtbot/formulae
