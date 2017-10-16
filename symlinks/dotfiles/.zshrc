@@ -1,14 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# ZSH_THEME="agnoster"
-# ZSH_THEME="bureau"
-
-ZSH_THEME="wezm"
-
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git git-flow-completion git-flow)
+plugins=(git)
+
+export ZSH_THEME="agnoster"
 
 # Path
 export PATH="~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.bin:$PATH"
@@ -33,11 +30,8 @@ export PATH="/usr/local/Caskroom/android-sdk/25.2.3/emulator/:$PATH"
 # gnubin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# yarn
-export PATH="$(yarn global bin):$PATH"
-
 # aws
-source ~/.aws_credentials
+# source ~/.aws_credentials
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -55,9 +49,11 @@ export EDITOR='vim'
 export DEFAULT_USER="$USER"
 
 # tmuxinator completion
-source ~/.bin/tmuxinator.zsh
+# source ~/.bin/tmuxinator.zsh
 
 # fastlane
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
 cd ~/repos
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

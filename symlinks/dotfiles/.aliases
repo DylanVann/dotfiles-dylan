@@ -17,6 +17,7 @@ alias j="jobs"
 alias v="vim"
 alias t="tmux"
 alias serve="python -m SimpleHTTPServer 8000"
+alias pip="pip3"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
