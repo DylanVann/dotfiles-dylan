@@ -2,13 +2,24 @@ casks:
 - adobe-creative-cloud
 - atom
 - cyberduck
+- !!python/unicode 'docker'
+- !!python/unicode 'firefox'
+- !!python/unicode 'font-fira-code'
+- !!python/unicode 'gifcapture'
 - google-chrome
-- webstorm
 - iterm2
+- !!python/unicode 'java'
 - lastpass
 - skyfonts
+- !!python/unicode 'slack'
 - sourcetree
+- !!python/unicode 'spotify'
+- !!python/unicode 'toggl'
 - transmission
+- !!python/unicode 'visual-studio-code'
+- !!python/unicode 'vlc'
+- webstorm
+- !!python/unicode 'xquartz'
 formulas:
 - ant
 - augeas
@@ -28,10 +39,13 @@ formulas:
 - gdbm
 - gettext
 - git
+- !!python/unicode 'git-lfs'
 - gitstats
 - gmp
 - gnuplot
 - gnutls
+- !!python/unicode 'heroku'
+- !!python/unicode 'heroku-node'
 - icu4c
 - imagemagick
 - jenv
@@ -47,11 +61,13 @@ formulas:
 - libyaml
 - lua
 - mongodb
+- !!python/unicode 'mysql'
 - nettle
 - nvm
 - openconnect
 - openssl
 - openssl@1.1
+- !!python/unicode 'pari'
 - pcre
 - pkg-config
 - pyenv
@@ -63,6 +79,7 @@ formulas:
 - redis
 - sqlite
 - tmux
+- !!python/unicode 'tree'
 - vim
 - watchman
 - webp
@@ -77,8 +94,10 @@ symlinks:
     dotfiles/.*: '~'
 taps:
 - caskroom/cask
+- !!python/unicode 'caskroom/fonts'
 - caskroom/versions
 - facebook/fb
+- !!python/unicode 'heroku/brew'
 - homebrew/boneyard
 - homebrew/bundle
 - homebrew/core

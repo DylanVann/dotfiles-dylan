@@ -16,8 +16,9 @@ alias h="history"
 alias j="jobs"
 alias v="vim"
 alias t="tmux"
-alias serve="python -m SimpleHTTPServer 8000"
 alias pip="pip3"
+alias mr="meteor npm run"
+alias mrs="meteor npm run start"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

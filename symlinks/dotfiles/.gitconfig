@@ -1,8 +1,8 @@
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [user]
   name = Your Name
   email = you@example.com
@@ -18,7 +18,7 @@
   reset-to-remote = "! git clean -d -f && git fetch origin && git checkout master && git reset --hard origin/master"
   permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
   editor = /usr/bin/vim
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -RFX
@@ -26,7 +26,11 @@
   helper = osxkeychain
 [rebase]
   autostash = true
-[commit]
-  template = ~/.stCommitMsg
 [diff-so-fancy]
   changeHunkIndicators = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

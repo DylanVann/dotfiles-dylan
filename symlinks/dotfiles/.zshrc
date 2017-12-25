@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+# Pah to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 COMPLETION_WAITING_DOTS="true"
@@ -17,15 +17,15 @@ eval "$(rbenv init -)"
 
 # Java - jenv
 export PATH="$HOME/.jenv/bin:$PATH"
-export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 eval "$(jenv init -)"
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 export PATH=${JAVA_HOME}/bin:$PATH
 
 # Android
-export ANDROID_HOME="/usr/local/share/android-sdk"
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-export PATH="/usr/local/Caskroom/android-sdk/25.2.3/tools:$PATH"
-export PATH="/usr/local/Caskroom/android-sdk/25.2.3/emulator/:$PATH"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/tools/bin
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # gnubin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -54,6 +54,12 @@ export DEFAULT_USER="$USER"
 # fastlane
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 
-cd ~/repos
+# cd ~/repos
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
