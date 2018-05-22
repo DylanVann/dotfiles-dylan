@@ -8,6 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias r="cd ~/repos"
+alias cl="clear"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias stree="open -n /Applications/SourceTree.app"
@@ -19,6 +20,7 @@ alias t="tmux"
 alias pip="pip3"
 alias mr="meteor npm run"
 alias mrs="meteor npm run start"
+alias as="open -a /Applications/Android\ Studio.app"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -26,6 +28,9 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
 	colorflag="-G"
 fi
+
+# exa
+alias ll="exa -abghHliS"
 
 # List all files colorized in long format
 alias l="ls -laF ${colorflag}"
