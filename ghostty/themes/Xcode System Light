@@ -1,4 +1,5 @@
-# Xcode 27 "Default (Light)" editor theme, matching the macOS light appearance.
+# Xcode 27 light appearance: the classic "Default (Light)" editor theme, which
+# Xcode 27 still uses in light mode (no workspace theme preset applied).
 # Generated from the .xccolortheme bundled in Xcode.app (DVTUserInterfaceKit):
 # background/foreground/selection are the editor's, and the ANSI slots map
 # red=string, green=function, yellow=number/attribute, blue=declaration,

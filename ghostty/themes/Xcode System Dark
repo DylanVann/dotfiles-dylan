@@ -1,27 +1,29 @@
-# Xcode 27 "Default (Dark)" editor theme, matching the macOS dark appearance.
-# Generated from the .xccolortheme bundled in Xcode.app (DVTUserInterfaceKit):
-# background/foreground/selection are the editor's, and the ANSI slots map
-# red=string, green=function, yellow=number/attribute, blue=declaration,
-# magenta=keyword, cyan=system function (purple), bright black=comment.
-palette = 0=#414249
-palette = 1=#fc6a5d
-palette = 2=#67b7a4
-palette = 3=#d0bf69
-palette = 4=#41a1c0
-palette = 5=#fc5fa3
-palette = 6=#a167e6
-palette = 7=#ddddde
-palette = 8=#6c7986
-palette = 9=#fc6a5d
-palette = 10=#9ef1dd
-palette = 11=#fd8f3f
-palette = 12=#5dd8ff
-palette = 13=#fc5fa3
-palette = 14=#d0a8ff
+# Xcode 27 dark appearance: the "Standard" workspace theme preset, which is
+# Xcode 27's default in dark mode. The preset is a procedural recipe (hues and
+# intensities, not stored colors), so these values were measured from the
+# rendered editor in sRGB: neutral #262626 background, warm off-white text,
+# and the tinted syntax colors. ANSI slots: red=string, green=identifier,
+# yellow=number, blue=link (bright: type), magenta=keyword (bright: attribute
+# and macro), cyan=system type/function (lavender), bright black=comment.
+palette = 0=#353535
+palette = 1=#ff8d79
+palette = 2=#26a5bf
+palette = 3=#eba800
+palette = 4=#5a97e4
+palette = 5=#ff82b3
+palette = 6=#d795fc
+palette = 7=#faf1f3
+palette = 8=#aab3cd
+palette = 9=#ff8d79
+palette = 10=#26a5bf
+palette = 11=#eba800
+palette = 12=#03c8f9
+palette = 13=#d751e4
+palette = 14=#d795fc
 palette = 15=#ffffff
-background = #1f1f24
-foreground = #ddddde
-cursor-color = #ffffff
-cursor-text = #1f1f24
-selection-background = #515b70
-selection-foreground = #ddddde
+background = #262626
+foreground = #faf1f3
+cursor-color = #faf1f3
+cursor-text = #262626
+selection-background = #474747
+selection-foreground = #faf1f3
