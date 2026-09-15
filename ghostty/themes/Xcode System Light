@@ -1,25 +1,27 @@
-# Xcode "Default (Light)" editor palette, matching the macOS light appearance.
-# Derived from Ghostty's bundled "Xcode Light" theme, with ANSI black made an
-# actual dark color (the bundled theme uses the pale selection blue there).
-palette = 0=#1a1a1a
-palette = 1=#d12f1b
-palette = 2=#3e8087
-palette = 3=#78492a
+# Xcode 27 "Default (Light)" editor theme, matching the macOS light appearance.
+# Generated from the .xccolortheme bundled in Xcode.app (DVTUserInterfaceKit):
+# background/foreground/selection are the editor's, and the ANSI slots map
+# red=string, green=function, yellow=number/attribute, blue=declaration,
+# magenta=keyword, cyan=system function (purple), bright black=comment.
+palette = 0=#000000
+palette = 1=#c41a16
+palette = 2=#326d74
+palette = 3=#815f03
 palette = 4=#0f68a0
-palette = 5=#ad3da4
-palette = 6=#804fb8
-palette = 7=#8a99a6
+palette = 5=#9b2393
+palette = 6=#6c36a9
+palette = 7=#6c6c6c
 palette = 8=#5d6c79
-palette = 9=#d12f1b
-palette = 10=#23575c
-palette = 11=#78492a
+palette = 9=#c41a16
+palette = 10=#1c464a
+palette = 11=#643820
 palette = 12=#0b4f79
-palette = 13=#ad3da4
-palette = 14=#4b21b0
-palette = 15=#262626
+palette = 13=#aa0d91
+palette = 14=#3900a0
+palette = 15=#ffffff
 background = #ffffff
 foreground = #262626
-cursor-color = #262626
+cursor-color = #000000
 cursor-text = #ffffff
 selection-background = #a4cdff
 selection-foreground = #262626

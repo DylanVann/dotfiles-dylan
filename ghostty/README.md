@@ -8,9 +8,10 @@ Config and custom themes for [Ghostty](https://ghostty.org).
 ln -s ~/Developer/dotfiles-dylan/ghostty ~/.config/ghostty
 ```
 
-The `themes/` directory holds two custom themes derived from Ghostty's bundled
-`Xcode Light` and `Xcode Dark`, matching Xcode's Default editor palettes and
-therefore the macOS light and dark appearance. The config picks between them
+The `themes/` directory holds two custom themes generated from the
+`Default (Light)` and `Default (Dark)` `.xccolortheme` files bundled in Xcode 27
+(Ghostty's own `Xcode Light`/`Xcode Dark` predate the current palette), so they
+match Xcode's Default editor and therefore the macOS light and dark appearance. The config picks between them
 with `theme = light:...,dark:...`, so Ghostty follows the system appearance.
 
 Reload a running Ghostty with Cmd+Shift+, after editing.
