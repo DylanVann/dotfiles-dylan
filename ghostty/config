@@ -1,0 +1,32 @@
+# https://ghostty.org/docs/config
+
+working-directory = ~/Developer
+
+# Follow the macOS appearance with the Xcode "Default" editor palettes: custom
+# themes in ~/.config/ghostty/themes (derived from the bundled "Xcode Light" /
+# "Xcode Dark"). Ghostty switches live when the system appearance changes.
+# Note: the fish shell colors in conf.d/catppuccin_latte_theme.fish are still
+# the Catppuccin Latte palette, so prompt/syntax colors will not match exactly.
+theme = light:Xcode System Light,dark:Xcode System Dark
+
+keybind = unconsumed:ctrl+l=goto_split:right
+keybind = unconsumed:ctrl+h=goto_split:left
+keybind = unconsumed:ctrl+k=goto_split:top
+keybind = unconsumed:ctrl+j=goto_split:bottom
+
+
+unfocused-split-opacity = 0.9
+window-padding-x = 8
+window-padding-y = 0
+
+font-family = Share Tech Mono
+
+# keybind = command+d=unbind
+# keybind = command+D=unbind
+
+scrollback-limit = 1073741824
+
+# auto-update-channel = tip
+auto-update-channel = stable
+
+clipboard-paste-protection = "false"
