@@ -1,0 +1,7 @@
+# Universal variable store: machine state written by fish itself.
+fish_variables
+# Completions dropped in by tools (bun, docker, kubectl, orbctl, pnpm, wt, ...).
+completions/
+# Backups fish makes when migrating config.
+*.bak.*
+.DS_Store
