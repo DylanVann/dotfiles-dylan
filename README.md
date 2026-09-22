@@ -10,7 +10,9 @@ git clone https://github.com/DylanVann/dotfiles-dylan ~/Developer/dotfiles-dylan
 - `config/` is symlinked into `~/.config` (one folder per app; Zed keeps other
   state in its folder, so only its files are linked).
 - `home/` is symlinked into `~` (dotfiles).
-- `scripts/` are one-off macOS settings, run by hand.
+- `scripts/macos-settings.sh` applies the `defaults` settings (keyboard, Finder,
+  Fork); `scripts/remap-caps-lock-to-escape.sh` installs a login agent for the
+  Caps Lock remap. Both are run by hand.
 - `Brewfile` is installed with `brew bundle`.
 
 `install.sh` makes the symlinks and installs the `Brewfile`. It never overwrites
