@@ -1,5 +1,9 @@
 # Installed by install.sh with `brew bundle`.
-#
-# tap "owner/repo"
-# brew "formula"
-# cask "app"
+
+brew "fish"
+
+cask "fork"
+cask "ghostty"
+cask "google-chrome"
+cask "karabiner-elements"
+cask "zed"
