@@ -4,15 +4,21 @@ npm-debug.log
 # Mac
 .DS_Store
 
-# Windows
-Thumbs.db
-
 # WebStorm
 .idea/
+
+# VSCode
+.vscode
 
 # vi
 *~
 
 # General
-log/
 *.log
+index.svelte
+
+**/.claude/settings.local.json
+
+# rift (https://github.com/anomalyco/rift)
+.rift
+.rift.toml

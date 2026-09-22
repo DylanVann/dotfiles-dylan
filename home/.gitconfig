@@ -1,40 +1,29 @@
-# Name and email live in ~/.gitconfig.local, which isn't checked in
+# Name, email and signing key live in ~/.gitconfig.local, which isn't checked in
 [include]
 	path = ~/.gitconfig.local
-[alias]
-  s = status
-  c = commit
-  p = push
-  pf = push -f
-  co = checkout
-  br = branch
-  undo = "! f() { git clean -df && git checkout -- . }; f"
-  permission-reset = "! git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply"
-  reset-to-remote = "! git clean -d -f && git fetch origin && git checkout master && git reset --hard origin/master"
-  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [core]
 	excludesfile = ~/.gitignore_global
-  editor = /usr/bin/vim
-  autocrlf = input
-  pager = diff-so-fancy | less --tabs=4 -RFX
-[credential]
-  helper = osxkeychain
-[rebase]
-  autostash = true
-[diff-so-fancy]
-  changeHunkIndicators = true
+	editor = vim
+	ignorecase = false
 [commit]
-	template = ~/.stCommitMsg
+	gpgsign = true
+[init]
+	defaultBranch = main
 [push]
-	followTags = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	default = current
+	autoSetupRemote = true
+[pull]
+	ff = only
+[rebase]
+	updateRefs = false
+[rerere]
+	enabled = true
+[alias]
+	rmbranch = "!f(){ git branch -D ${1} && git push origin --delete ${1}; };f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[lfs]
+	contenttype = 0

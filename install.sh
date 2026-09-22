@@ -28,6 +28,7 @@ for dir in "$DOTFILES"/config/*/; do
   app="$(basename "$dir")"
   if [[ " $LINK_FILES " == *" $app "* ]]; then
     for file in "$dir"*; do
+      [ "$(basename "$file")" = "README.md" ] && continue
       link "$file" "$HOME/.config/$app/$(basename "$file")"
     done
   else

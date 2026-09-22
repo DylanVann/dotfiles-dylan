@@ -1,2 +1,2 @@
 # Unity CLI
-source "$HOME/.unity/env.fish"
+test -f "$HOME/.unity/env.fish"; and source "$HOME/.unity/env.fish"

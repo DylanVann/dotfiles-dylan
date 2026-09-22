@@ -1,6 +1,10 @@
 # Installed by install.sh with `brew bundle`.
 
 brew "fish"
+brew "eza"
+brew "fnm"
+brew "tmux"
+brew "zoxide"
 
 cask "fork"
 cask "ghostty"

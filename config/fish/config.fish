@@ -17,10 +17,7 @@ set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
 set -x ANDROID_AVD_HOME $HOME/.android/avd
 fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin
 
-# Neovim
 fish_add_path ~/.local/bin
-alias nvim=lvim
-alias vim=nvim
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -30,15 +27,14 @@ end
 # pnpm end
 
 # opencode
-fish_add_path $HOME/.opencode/bin
+test -d $HOME/.opencode/bin; and fish_add_path $HOME/.opencode/bin
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-# >>> grok installer >>>
-fish_add_path $HOME/.grok/bin
-# <<< grok installer <<<
+# grok
+test -d $HOME/.grok/bin; and fish_add_path $HOME/.grok/bin
 
 # Node | fnm
 # Kept LAST on purpose: fish re-prepends $fish_user_paths (which contains
@@ -48,4 +44,17 @@ if type -q fnm
     fnm env --use-on-cd --version-file-strategy=recursive | source
 end
 
-zoxide init fish | source
+type -q zoxide; and zoxide init fish | source
+
+# Abbreviations
+abbr -a -- - 'cd -'
+abbr -a .. 'cd ..'
+abbr -a ... 'cd ../..'
+abbr -a .... 'cd ../../..'
+abbr -a g git
+abbr -a t tmux
+abbr -a cl clear
+abbr -a ll 'eza -la'
+abbr -a localip 'ipconfig getifaddr en0'
+abbr -a ip 'dig +short myip.opendns.com @resolver1.opendns.com'
+abbr -a flush 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
