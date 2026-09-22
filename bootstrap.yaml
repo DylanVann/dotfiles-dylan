@@ -7,7 +7,6 @@ casks:
 - !!python/unicode 'font-fira-code'
 - !!python/unicode 'gifcapture'
 - google-chrome
-- iterm2
 - !!python/unicode 'java'
 - lastpass
 - skyfonts
