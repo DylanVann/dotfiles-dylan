@@ -86,8 +86,6 @@ formulas:
 - xvid
 - xz
 - zlib
-- zsh
-- zsh-completions
 symlinks:
     /Volumes/repos: ~/repos
     dotfiles/.*: '~'
