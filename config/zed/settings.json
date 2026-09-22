@@ -31,7 +31,9 @@
   "light": "Xcode System Light",
   "dark": "Xcode System Dark"
  },
+	"buffer_font_family": "Share Tech Mono",
 	"buffer_font_size": 15,
+	"terminal": { "font_family": "Share Tech Mono" },
 	"vim_mode": true,
 	"format_on_save": "on",
 	"lsp": {

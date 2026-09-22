@@ -7,3 +7,5 @@ cask "ghostty"
 cask "google-chrome"
 cask "karabiner-elements"
 cask "zed"
+
+cask "font-share-tech-mono"
