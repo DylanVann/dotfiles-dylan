@@ -22,8 +22,17 @@ link() {
 }
 
 # ~/.config/<app> -> <repo>/config/<app>
+# Apps that keep other state in their config folder get each file linked instead.
+LINK_FILES="zed"
 for dir in "$DOTFILES"/config/*/; do
-  link "${dir%/}" "$HOME/.config/$(basename "$dir")"
+  app="$(basename "$dir")"
+  if [[ " $LINK_FILES " == *" $app "* ]]; then
+    for file in "$dir"*; do
+      link "$file" "$HOME/.config/$app/$(basename "$file")"
+    done
+  else
+    link "${dir%/}" "$HOME/.config/$app"
+  fi
 done
 
 # ~/.<dotfile> -> <repo>/home/.<dotfile>
