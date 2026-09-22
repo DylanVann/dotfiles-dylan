@@ -2,11 +2,7 @@
 
 Config and custom themes for [Ghostty](https://ghostty.org).
 
-`~/.config/ghostty` is a symlink to this directory:
-
-```sh
-ln -s ~/Developer/dotfiles-dylan/config/ghostty ~/.config/ghostty
-```
+`install.sh` in the repo root symlinks this directory to `~/.config/ghostty`.
 
 The `themes/` directory holds two custom themes matching Xcode 27's defaults,
 and therefore the macOS light and dark appearance. Light is generated from the

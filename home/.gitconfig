@@ -1,6 +1,6 @@
-[user]
-	name = Your Name
-	email = you@example.com
+# Name and email live in ~/.gitconfig.local, which isn't checked in
+[include]
+	path = ~/.gitconfig.local
 [alias]
   s = status
   c = commit
