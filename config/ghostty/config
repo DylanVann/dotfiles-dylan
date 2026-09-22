@@ -2,11 +2,8 @@
 
 working-directory = ~/Developer
 
-# Follow the macOS appearance with the Xcode "Default" editor palettes: custom
-# themes in ~/.config/ghostty/themes (derived from the bundled "Xcode Light" /
-# "Xcode Dark"). Ghostty switches live when the system appearance changes.
-# Note: the fish shell colors in conf.d/catppuccin_latte_theme.fish are still
-# the Catppuccin Latte palette, so prompt/syntax colors will not match exactly.
+# Custom themes in ./themes matching Xcode 27's light and dark defaults (see README).
+# Ghostty switches live with the system appearance.
 theme = light:Xcode System Light,dark:Xcode System Dark
 
 keybind = unconsumed:ctrl+l=goto_split:right
