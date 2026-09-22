@@ -69,7 +69,6 @@ formulas:
 - !!python/unicode 'pari'
 - pcre
 - pkg-config
-- pyenv
 - python3
 - rbenv
 - rcm
