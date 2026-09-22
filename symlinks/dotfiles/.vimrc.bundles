@@ -107,12 +107,6 @@ augroup END
 " }
 
 Plug 'bling/vim-airline'
-" vim-airline {
-augroup vim-airline
-  autocmd!
-  let g:airline_powerline_fonts = 1
-augroup END
-" }
 
 
 
