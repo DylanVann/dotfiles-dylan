@@ -7,9 +7,10 @@ git clone https://github.com/DylanVann/dotfiles-dylan ~/Developer/dotfiles-dylan
 ~/Developer/dotfiles-dylan/install.sh
 ```
 
-`install.sh` symlinks `fish`, `ghostty` and `karabiner` into `~/.config`, symlinks
-everything in `symlinks/dotfiles` into `~`, and installs the `Brewfile`. It never
-overwrites a real file, so move any existing config out of the way first.
+- `config/` is symlinked into `~/.config` (one folder per app).
+- `home/` is symlinked into `~` (dotfiles).
+- `scripts/` are one-off macOS settings, run by hand.
+- `Brewfile` is installed with `brew bundle`.
 
-The other scripts in the root apply one-off macOS settings and can be run on
-their own.
+`install.sh` makes the symlinks and installs the `Brewfile`. It never overwrites
+a real file, so move any existing config out of the way first.

@@ -5,7 +5,7 @@ Config and custom themes for [Ghostty](https://ghostty.org).
 `~/.config/ghostty` is a symlink to this directory:
 
 ```sh
-ln -s ~/Developer/dotfiles-dylan/ghostty ~/.config/ghostty
+ln -s ~/Developer/dotfiles-dylan/config/ghostty ~/.config/ghostty
 ```
 
 The `themes/` directory holds two custom themes matching Xcode 27's defaults,

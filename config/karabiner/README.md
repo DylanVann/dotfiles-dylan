@@ -16,7 +16,7 @@ The rules are written in TypeScript in `rules.ts` using the helpers in `utils.ts
 
 1. Install and start [Karabiner Elements](https://karabiner-elements.pqrs.org/).
 1. Delete the default `~/.config/karabiner` folder.
-1. Symlink this directory: `ln -s ~/Developer/dotfiles-dylan/karabiner ~/.config/karabiner`.
+1. Symlink this directory: `ln -s ~/Developer/dotfiles-dylan/config/karabiner ~/.config/karabiner`.
 1. Restart the console user server: `` launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server ``.
 
 ## Development

@@ -21,13 +21,13 @@ link() {
   fi
 }
 
-# ~/.config/<app> -> <repo>/<app>
-for app in fish ghostty karabiner; do
-  link "$DOTFILES/$app" "$HOME/.config/$app"
+# ~/.config/<app> -> <repo>/config/<app>
+for dir in "$DOTFILES"/config/*/; do
+  link "${dir%/}" "$HOME/.config/$(basename "$dir")"
 done
 
-# ~/.<dotfile> -> <repo>/symlinks/dotfiles/.<dotfile>
-for file in "$DOTFILES"/symlinks/dotfiles/.*; do
+# ~/.<dotfile> -> <repo>/home/.<dotfile>
+for file in "$DOTFILES"/home/.*; do
   name="$(basename "$file")"
   [ "$name" = "." ] || [ "$name" = ".." ] && continue
   link "$file" "$HOME/$name"

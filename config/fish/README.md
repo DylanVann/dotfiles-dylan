@@ -5,7 +5,7 @@ Config for the [fish shell](https://fishshell.com).
 `~/.config/fish` is a symlink to this directory:
 
 ```sh
-ln -s ~/Developer/dotfiles-dylan/fish ~/.config/fish
+ln -s ~/Developer/dotfiles-dylan/config/fish ~/.config/fish
 ```
 
 `conf.d/theme.fish` sets the shell colors with the terminal's named ANSI colors
