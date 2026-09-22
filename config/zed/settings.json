@@ -28,8 +28,8 @@
  },
  "theme": {
   "mode": "system",
-  "light": "Ayu Light",
-  "dark": "One Dark"
+  "light": "Xcode System Light",
+  "dark": "Xcode System Dark"
  },
 	"buffer_font_size": 15,
 	"vim_mode": true,

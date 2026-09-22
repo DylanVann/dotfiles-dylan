@@ -12,4 +12,5 @@ so its values were measured from the rendered editor (`#262626` background).
 Ghostty's own `Xcode Light`/`Xcode Dark` predate both. The config picks between them
 with `theme = light:...,dark:...`, so Ghostty follows the system appearance.
 
-Reload a running Ghostty with Cmd+Shift+, after editing.
+Reload a running Ghostty with Cmd+Shift+, after editing. The same themes are
+ported to Zed in `../zed/themes`.
