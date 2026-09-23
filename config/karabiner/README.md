@@ -4,13 +4,14 @@ Caps Lock is a Hyper key (Escape when tapped). Holding Hyper plus a layer key op
 
 - **b** browse: open sites
 - **o** open: launch apps
-- **w** window: Rectangle actions, tabs, back/forward
-- **s** system: volume, brightness, media, Do Not Disturb, appearance, lock, voice dictation
+- **w** window: hide, tabs, back/forward
+- **s** system: volume, brightness, media, lock, voice dictation
 - **v** move: hjkl arrows, paging, Homerow
 - **c** music: play/pause, next, previous
-- **r** raycast: Raycast commands
 
 The rules are written in TypeScript in `rules.ts` using the helpers in `utils.ts`, and `karabiner.json` is generated from them.
+
+Window snapping and the launcher are not in these layers; they are Tinycast's own global hotkeys, set by `scripts/tinycast-settings.sh` in the repo root.
 
 ## Installation
 

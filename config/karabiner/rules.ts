@@ -1,7 +1,7 @@
 import fs from "fs";
 import { execFileSync } from "child_process";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import { createHyperSubLayers, app, open } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -68,35 +68,18 @@ const rules: KarabinerRules[] = [
     o: {
       1: app("1Password"),
       g: app("Google Chrome"),
-      v: app("Visual Studio Code"),
+      // "E"ditor (z is Zoom)
+      e: app("Zed"),
       d: app("Discord"),
       s: app("Slack"),
-      w: app("WebStorm"),
       m: app("Spotify"),
       t: app("Ghostty"),
       z: app("zoom.us"),
-      r: app("Reflect"),
       f: app("Finder"),
       p: app("Spotify"),
-      a: app("iA Presenter"),
     },
 
-    // TODO: This doesn't quite work yet.
-    // l = "Layouts" via Raycast's custom window management
-    // l: {
-    //   // Coding layout
-    //   c: shell`
-    //     open -a "Visual Studio Code.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
-
-    //     open -a "Terminal.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
-    //   `,
-    // },
-
-    // w = "Window" via rectangle.app
+    // w = "Window" (snapping is on Tinycast's own ctrl+opt+cmd chords, see scripts/tinycast-settings.sh)
     w: {
       semicolon: {
         description: "Window: Hide",
@@ -107,13 +90,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      y: rectangle("previous-display"),
-      o: rectangle("next-display"),
-      k: rectangle("top-half"),
-      j: rectangle("bottom-half"),
-      h: rectangle("left-half"),
-      l: rectangle("right-half"),
-      f: rectangle("maximize"),
       u: {
         description: "Window: Previous Tab",
         to: [
@@ -214,16 +190,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      e: open(
-        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
-      ),
-      // "D"o not disturb toggle
-      d: open(
-        `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
-      ),
-      // "T"heme
-      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
-      c: open("raycast://extensions/raycast/system/open-camera"),
       // 'v'oice
       v: {
         to: [
@@ -281,27 +247,6 @@ const rules: KarabinerRules[] = [
       b: {
         to: [{ key_code: "rewind" }],
       },
-    },
-
-    // r = "Raycast"
-    r: {
-      c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
     },
   }),
 ];

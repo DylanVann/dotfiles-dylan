@@ -1,5 +1,7 @@
 # Installed by install.sh with `brew bundle`.
 
+tap "abue-ammar/tinycast"
+
 brew "fish"
 brew "eza"
 brew "fnm"
@@ -10,6 +12,7 @@ cask "fork"
 cask "ghostty"
 cask "google-chrome"
 cask "karabiner-elements"
+cask "tinycast"
 cask "zed"
 
 cask "font-share-tech-mono"

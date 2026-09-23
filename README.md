@@ -11,8 +11,9 @@ git clone https://github.com/DylanVann/dotfiles-dylan ~/Developer/dotfiles-dylan
   state in its folder, so only its files are linked).
 - `home/` is symlinked into `~` (dotfiles).
 - `scripts/macos-settings.sh` applies the `defaults` settings (keyboard, Finder,
-  Fork); `scripts/remap-caps-lock-to-escape.sh` installs a login agent for the
-  Caps Lock remap. Both are run by hand.
+  Fork); `scripts/tinycast-settings.sh` sets the Tinycast hotkeys (launcher on
+  cmd+space, window snapping on ctrl+opt+cmd); `scripts/remap-caps-lock-to-escape.sh`
+  installs a login agent for the Caps Lock remap. All are run by hand.
 - `Brewfile` is installed with `brew bundle`.
 
 `install.sh` makes the symlinks and installs the `Brewfile`. It never overwrites
