@@ -7,8 +7,7 @@ end
 set -x LANG en_US.UTF-8
 
 # Homebrew
-set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
-fish_add_path /opt/homebrew/sbin
+fish_add_path /opt/homebrew/bin /opt/homebrew/sbin
 
 # Android
 set -x JAVA_HOME /Applications/Android\ Studio.app/Contents/jbr/Contents/Home
@@ -37,9 +36,8 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 test -d $HOME/.grok/bin; and fish_add_path $HOME/.grok/bin
 
 # Node | fnm
-# Kept LAST on purpose: fish re-prepends $fish_user_paths (which contains
-# /opt/homebrew/bin) to PATH every time fish_add_path runs, so fnm's node
-# would otherwise be shadowed by Homebrew's node.
+# Kept last on purpose: every fish_add_path call re-prepends $fish_user_paths
+# (which holds /opt/homebrew/bin) to PATH, which would shadow fnm's node.
 if type -q fnm
     fnm env --use-on-cd --version-file-strategy=recursive | source
 end

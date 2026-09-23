@@ -43,6 +43,9 @@ for file in "$DOTFILES"/home/.*; do
   link "$file" "$HOME/$name"
 done
 
+# Directories ~/.vimrc points backups, swap files and undo history at
+mkdir -p "$HOME/.vim/backup" "$HOME/.vim/swp" "$HOME/.vim/undo"
+
 # Homebrew packages
 if command -v brew > /dev/null; then
   brew bundle --file="$DOTFILES/Brewfile" --no-upgrade

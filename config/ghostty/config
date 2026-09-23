@@ -11,19 +11,14 @@ keybind = unconsumed:ctrl+h=goto_split:left
 keybind = unconsumed:ctrl+k=goto_split:top
 keybind = unconsumed:ctrl+j=goto_split:bottom
 
-
 unfocused-split-opacity = 0.9
 window-padding-x = 8
 window-padding-y = 0
 
 font-family = Share Tech Mono
 
-# keybind = command+d=unbind
-# keybind = command+D=unbind
-
 scrollback-limit = 1073741824
 
-# auto-update-channel = tip
 auto-update-channel = stable
 
 clipboard-paste-protection = "false"

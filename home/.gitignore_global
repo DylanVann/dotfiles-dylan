@@ -15,7 +15,6 @@ npm-debug.log
 
 # General
 *.log
-index.svelte
 
 **/.claude/settings.local.json
 

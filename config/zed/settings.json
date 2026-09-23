@@ -7,46 +7,46 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"icon_theme": "Zed (Default)",
- "cli_default_open_behavior": "new_window",
- "project_panel": {
-  "dock": "left"
- },
- "outline_panel": {
-  "dock": "left"
- },
- "collaboration_panel": {
-  "dock": "left"
- },
- "agent": {
-  "dock": "right",
-  "favorite_models": [],
-  "model_parameters": []
- },
- "git_panel": {
-  "dock": "left"
- },
- "theme": {
-  "mode": "system",
-  "light": "Xcode System Light",
-  "dark": "Xcode System Dark"
- },
-	"buffer_font_family": "Share Tech Mono",
-	"buffer_font_size": 15,
-	"terminal": { "font_family": "Share Tech Mono" },
-	"vim_mode": true,
-	"format_on_save": "on",
-	"lsp": {
-		"biome": {
-			"settings": { "require_config_file": true }
-		}
-	},
-	"languages": {
-		"JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		"CSS": { "formatter": { "language_server": { "name": "biome" } } }
-	}
+  "icon_theme": "Zed (Default)",
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Xcode System Light",
+    "dark": "Xcode System Dark"
+  },
+  "buffer_font_family": "Share Tech Mono",
+  "buffer_font_size": 15,
+  "terminal": { "font_family": "Share Tech Mono" },
+  "vim_mode": true,
+  "format_on_save": "on",
+  "lsp": {
+    "biome": {
+      "settings": { "require_config_file": true }
+    }
+  },
+  "languages": {
+    "JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
+    "TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
+    "TSX": { "formatter": { "language_server": { "name": "biome" } } },
+    "JSON": { "formatter": { "language_server": { "name": "biome" } } },
+    "JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+    "CSS": { "formatter": { "language_server": { "name": "biome" } } }
+  }
 }
