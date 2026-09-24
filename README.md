@@ -30,5 +30,6 @@ The GitHub Actions workflow runs the installer twice on a macOS runner, checks
 the shell and fish syntax, and validates the Ghostty config. `AGENTS.md` has
 the same checks and the repo conventions for AI agents.
 
-App switching is [rcmd](https://lowtechguys.com/rcmd) (right cmd + a letter,
-from the App Store via `mas`) and it keeps its own settings.
+App switching is [rcmd](https://lowtechguys.com/rcmd) (right cmd + a letter),
+installed from its Homebrew cask, not the App Store build, which its docs say
+to migrate off. It keeps its own settings.
