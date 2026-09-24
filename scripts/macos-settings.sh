@@ -2,6 +2,19 @@
 #
 # macOS and app settings that live in `defaults`. Safe to rerun.
 # Running apps keep their old values until relaunched; Finder is restarted at the end.
+#
+# Each domain touched below is exported first to
+# ~/.local/state/dotfiles/backups/<timestamp>/<domain>.plist, so the previous
+# values can be restored with `defaults import <domain> <file>`.
+
+set -euo pipefail
+
+BACKUPS="$HOME/.local/state/dotfiles/backups/$(date +%Y%m%d-%H%M%S)"
+mkdir -p "$BACKUPS"
+for domain in NSGlobalDomain com.apple.HIToolbox com.apple.finder com.DanPristupov.Fork; do
+  defaults export "$domain" "$BACKUPS/$domain.plist"
+done
+echo "Previous settings saved to $BACKUPS"
 
 # Keyboard
 # Key repeat instead of the press-and-hold accent popup

@@ -1,0 +1,45 @@
+name: Check dotfiles
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  macos:
+    # Free for public repos; macOS minutes are only billed on private ones.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Shell syntax
+        run: bash -n install.sh scripts/*.sh
+
+      - name: Install (dry run, then for real, then again to prove it's idempotent)
+        run: |
+          ./install.sh --dry-run
+          ./install.sh --skip-brew
+          ./install.sh --skip-brew | tee second-run.log
+          if grep -q 'backed up' second-run.log; then
+            echo 'second run replaced files it had just linked' >&2
+            exit 1
+          fi
+
+      - name: Fish syntax
+        run: |
+          brew install fish
+          fish -n config/fish/config.fish config/fish/conf.d/*.fish config/fish/functions/*.fish
+
+      - name: Ghostty config
+        run: |
+          brew install --cask ghostty
+          # Themes resolve from ~/.config/ghostty/themes, linked by install.sh above.
+          /Applications/Ghostty.app/Contents/MacOS/ghostty +validate-config
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: karabiner.json is built from rules.ts
+        working-directory: config/karabiner
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+          git diff --exit-code -- karabiner.json
