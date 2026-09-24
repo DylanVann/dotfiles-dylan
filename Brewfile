@@ -8,6 +8,7 @@ brew "fnm"
 brew "fzf"
 brew "tmux"
 brew "zoxide"
+brew "bat"
 
 cask "fork"
 cask "ghostty"
@@ -17,4 +18,4 @@ cask "karabiner-elements"
 cask "tinycast"
 cask "zed"
 
-cask "font-share-tech-mono"
+cask "font-sf-mono"

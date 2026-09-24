@@ -7,6 +7,9 @@ set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Themes come from a submodule (vendor/), which the config folders link into
+git -C "$DOTFILES" submodule update --init --quiet
+
 link() {
   local source="$1" target="$2"
   if [ -L "$target" ]; then
@@ -51,4 +54,9 @@ if command -v brew > /dev/null; then
   brew bundle --file="$DOTFILES/Brewfile" --no-upgrade
 else
   echo "skipped Brewfile (brew isn't installed)"
+fi
+
+# bat only picks up themes from its config folder after a cache rebuild
+if command -v bat > /dev/null; then
+  bat cache --build > /dev/null && echo "rebuilt bat cache"
 fi

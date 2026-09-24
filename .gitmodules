@@ -1,0 +1,3 @@
+[submodule "vendor/xcode-system-theme"]
+	path = vendor/xcode-system-theme
+	url = https://github.com/DylanVann/xcode-system-theme.git

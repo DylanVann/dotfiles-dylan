@@ -1,0 +1,3 @@
+# Xcode System colors through the terminal palette (see the themes folder).
+# New themes need `bat cache --build`, which install.sh runs.
+--theme="Xcode System"
