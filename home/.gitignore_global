@@ -21,3 +21,6 @@ npm-debug.log
 # rift (https://github.com/anomalyco/rift)
 .rift
 .rift.toml
+
+# Personal notes (e.g. ISSUES.local.md)
+*.local.md
