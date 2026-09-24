@@ -31,27 +31,8 @@ fish_add_path -g $PNPM_HOME
 set -gx BUN_INSTALL "$HOME/.bun"
 fish_add_path -g $BUN_INSTALL/bin
 
-# asdf (ruby); the shims dir is all the Go rewrite needs on PATH
-test -d $HOME/.asdf/shims; and fish_add_path -g $HOME/.asdf/shims
-
-# JetBrains Toolbox shell scripts
-test -d $HOME/.jetbrains; and fish_add_path -g $HOME/.jetbrains
-
-# maestro (mobile UI testing)
-test -d $HOME/.maestro/bin; and fish_add_path -g $HOME/.maestro/bin
-
-# rover (Apollo GraphQL)
-test -d $HOME/.rover/bin; and fish_add_path -g $HOME/.rover/bin
-
-# opencode
-test -d $HOME/.opencode/bin; and fish_add_path -g $HOME/.opencode/bin
-
-# grok
-test -d $HOME/.grok/bin; and fish_add_path -g $HOME/.grok/bin
-
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+# Tools specific to this machine (asdf, JetBrains, maestro, ...) go in
+# conf.d/local.fish, which is gitignored and loads before this file.
 
 # Node | fnm
 # Kept last on purpose: every fish_add_path call re-prepends $fish_user_paths

@@ -13,3 +13,7 @@ rebuilt from this file each session. Plain `fish_add_path` would persist the
 entry in the universal `fish_user_paths` (in `fish_variables`), where it would
 outlive its removal from the config. If a tool's installer adds itself that
 way, move the line here and run `set -eU fish_user_paths` once.
+
+Tools that belong to one machine rather than the setup (language managers,
+JetBrains scripts, one-off CLIs) go in `conf.d/local.fish`, which is
+gitignored and loads before `config.fish`. Use `fish_add_path -g` there too.

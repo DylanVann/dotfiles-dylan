@@ -28,7 +28,9 @@ details for that app.
 - `config/fish/fish_variables` and `config/fish/completions/` are machine
   state and stay untracked.
 - Machine-specific settings go in files the repo includes but doesn't track:
-  `~/.gitconfig.local` for the Git identity and signing key.
+  `~/.gitconfig.local` for the Git identity, signing key and `commit.gpgsign`,
+  and `config/fish/conf.d/local.fish` for PATH entries and hooks of tools
+  that belong to one machine.
 - No personal names, emails or absolute home paths in tracked config; the
   README is the only place they belong.
 - Don't add new `defaults` writes the user hasn't asked for. In particular the

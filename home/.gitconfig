@@ -1,12 +1,11 @@
-# Name, email and signing key live in ~/.gitconfig.local, which isn't checked in
+# Name, email, signing key and commit.gpgsign live in ~/.gitconfig.local, which
+# isn't checked in, so this file works on a machine with no key set up
 [include]
 	path = ~/.gitconfig.local
 [core]
 	# global ignores live in ~/.config/git/ignore, git's default location
 	editor = vim
 	ignorecase = false
-[commit]
-	gpgsign = true
 [init]
 	defaultBranch = main
 [push]

@@ -2,6 +2,8 @@
 fish_variables
 # Completions dropped in by tools (bun, docker, kubectl, orbctl, pnpm, wt, ...).
 completions/
+# Machine-specific PATH entries and tool hooks; see README.md.
+conf.d/local.fish
 # Backups fish makes when migrating config.
 *.bak.*
 .DS_Store

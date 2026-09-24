@@ -34,9 +34,9 @@ defaults write -g AppleShowAllExtensions -bool true
 defaults write com.apple.finder CreateDesktop -bool false
 
 # Fork (Preferences > General)
-# Diff font matching Ghostty and Zed; the font is installed by the Brewfile
-defaults write com.DanPristupov.Fork diffFontName -string "ShareTechMono-Regular"
-defaults write com.DanPristupov.Fork diffFontSize -float 11
+# Diff font matching Ghostty and Zed (SF Mono 13); the font is installed by the Brewfile
+defaults write com.DanPristupov.Fork diffFontName -string "SFMono-Regular"
+defaults write com.DanPristupov.Fork diffFontSize -float 13
 defaults write com.DanPristupov.Fork theme -string system
 
 killall Finder
