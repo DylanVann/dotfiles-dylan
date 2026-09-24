@@ -1,0 +1,2 @@
+# The Brewfile is a Ruby DSL; keep it out of the language stats
+Brewfile linguist-detectable=false
