@@ -34,12 +34,3 @@ jobs:
           brew install --cask ghostty
           # Themes resolve from ~/.config/ghostty/themes, linked by install.sh above.
           /Applications/Ghostty.app/Contents/MacOS/ghostty +validate-config
-
-      - uses: oven-sh/setup-bun@v2
-
-      - name: karabiner.json is built from rules.ts
-        working-directory: config/karabiner
-        run: |
-          bun install --frozen-lockfile
-          bun run build
-          git diff --exit-code -- karabiner.json

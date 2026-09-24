@@ -9,13 +9,16 @@ brew "fzf"
 brew "tmux"
 brew "zoxide"
 brew "bat"
+brew "mas"
 
 cask "fork"
 cask "ghostty"
 cask "google-chrome"
 cask "homerow"
-cask "karabiner-elements"
 cask "tinycast"
 cask "zed"
 
 cask "font-sf-mono"
+
+# App Store: rcmd switches to or launches an app with right cmd + a letter
+mas "rcmd", id: 1596283165

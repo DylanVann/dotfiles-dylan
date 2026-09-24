@@ -1,6 +1,6 @@
 # Working on these dotfiles
 
-macOS setup for fish, Ghostty, Zed, Karabiner and a few CLI tools. Read
+macOS setup for fish, Ghostty, Zed and a few CLI tools. Read
 README.md first; each folder under `config/` has its own README with the
 details for that app.
 
@@ -15,19 +15,18 @@ details for that app.
 3. The scripts in `scripts/` change system and app settings and are run by
    hand, one at a time, when the user asks for them. Don't run them as part of
    installation.
-4. Karabiner needs its console user server restarted after the config is
-   linked; see `config/karabiner/README.md`.
+4. App switching is rcmd (right cmd + a letter) and window snapping is
+   Tinycast. Both come from the Brewfile; rcmd keeps its own settings and
+   isn't configured from here. Caps Lock is Escape through the launch agent
+   that `scripts/remap-caps-lock-to-escape.sh` installs.
 
 ## Editing
 
-- `config/karabiner/karabiner.json` is generated. Edit `rules.ts` and run
-  `bun run build` in that folder; never hand-edit the JSON. CI fails if the
-  two disagree.
 - Shell colors come from the terminal's 16-color palette, not hex values, so
   fish follows whichever Ghostty theme is active. Keep it that way; don't add
   hard-coded colors to the fish config.
-- `config/fish/fish_variables`, `config/fish/completions/` and Karabiner's
-  `node_modules/` are machine state and stay untracked.
+- `config/fish/fish_variables` and `config/fish/completions/` are machine
+  state and stay untracked.
 - Machine-specific settings go in files the repo includes but doesn't track:
   `~/.gitconfig.local` for the Git identity and signing key.
 - No personal names, emails or absolute home paths in tracked config; the
@@ -42,7 +41,6 @@ details for that app.
 bash -n install.sh scripts/*.sh
 fish -n config/fish/config.fish config/fish/conf.d/*.fish config/fish/functions/*.fish
 ghostty +validate-config
-(cd config/karabiner && bun run build && git diff --exit-code -- karabiner.json)
 ./install.sh --dry-run
 ```
 

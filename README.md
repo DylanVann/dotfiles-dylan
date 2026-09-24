@@ -27,6 +27,8 @@ Brewfile, and `--target DIR` installs somewhere other than `~` for testing.
 same backups folder before writing.
 
 The GitHub Actions workflow runs the installer twice on a macOS runner, checks
-the shell and fish syntax, validates the Ghostty config, and fails if
-`karabiner.json` is out of date with `rules.ts`. `AGENTS.md` has the same
-checks and the repo conventions for AI agents.
+the shell and fish syntax, and validates the Ghostty config. `AGENTS.md` has
+the same checks and the repo conventions for AI agents.
+
+App switching is [rcmd](https://lowtechguys.com/rcmd) (right cmd + a letter,
+from the App Store via `mas`) and it keeps its own settings.

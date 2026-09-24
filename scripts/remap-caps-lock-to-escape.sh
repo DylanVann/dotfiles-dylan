@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Remap Caps Lock (0x39) to Escape (0x29) for every keyboard at the HID level.
-# Karabiner grabs keyboards before this applies, so this is only the fallback for when it isn't running.
 MAPPING='{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
 LABEL="local.remap-caps-lock-to-escape"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
