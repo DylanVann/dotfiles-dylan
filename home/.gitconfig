@@ -2,7 +2,7 @@
 [include]
 	path = ~/.gitconfig.local
 [core]
-	excludesfile = ~/.gitignore_global
+	# global ignores live in ~/.config/git/ignore, git's default location
 	editor = vim
 	ignorecase = false
 [commit]
